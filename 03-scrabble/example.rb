@@ -22,5 +22,15 @@ class Scrabble
       10 => %w(q z),
     }
   end
+
+  def self.letter_bonuses
+    {
+      nil => 1,
+      :single => 1,
+      :double => 2,
+      :triple => 3,
+    }
+  end
+
 end
 
