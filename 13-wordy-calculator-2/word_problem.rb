@@ -13,7 +13,6 @@ class WordProblem
 
   def answer
 
-
     calculate
   end
 
