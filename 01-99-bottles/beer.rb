@@ -7,18 +7,29 @@ class Beer
   def self.song
     count = 99
     while count > 1
-      puts "#{count} bottles of beer on the wall, #{count} bottles of beer."
-
-      if count == 2
-        puts "Take one down and pass it around, #{count - 1} bottle of beer on the wall."
-      else
-        puts "Take one down and pass it around, #{count - 1} bottles of beer on the wall."
-      end
+      main_lyric(count)
+      count == 2 ? modified_hook(count) : hook(count) 
 
       puts ""
       count -= 1
     end
+    
+    finale
+  end
 
+  def self.main_lyric(count)
+    puts "#{count} bottles of beer on the wall, #{count} bottles of beer."
+  end
+
+  def self.hook(count)
+    puts "Take one down and pass it around, #{count - 1} bottles of beer on the wall."
+  end
+
+  def self.modified_hook(count)
+    puts "Take one down and pass it around, #{count - 1} bottle of beer on the wall."
+  end
+
+  def self.finale
     puts "1 bottle of beer on the wall, 1 bottle of beer."
     puts "Take it down and pass it around, no more bottles of beer on the wall."
 
