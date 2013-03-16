@@ -1,4 +1,4 @@
-require_relative './year'
+require_relative './leap_year'
 require 'minitest/autorun'
 
 class YearTest < MiniTest::Unit::TestCase
@@ -11,6 +11,7 @@ class YearTest < MiniTest::Unit::TestCase
   end
 
   def test_century
+    assert !Year.new(1997).leap?
     assert !Year.new(1900).leap?
   end
 
